@@ -1,0 +1,13 @@
+E:\visual Studio projects\FileBrowser\FileBrowser\bin\Debug\netcoreapp3.1\FileBrowser.exe
+E:\visual Studio projects\FileBrowser\FileBrowser\bin\Debug\netcoreapp3.1\FileBrowser.deps.json
+E:\visual Studio projects\FileBrowser\FileBrowser\bin\Debug\netcoreapp3.1\FileBrowser.runtimeconfig.json
+E:\visual Studio projects\FileBrowser\FileBrowser\bin\Debug\netcoreapp3.1\FileBrowser.runtimeconfig.dev.json
+E:\visual Studio projects\FileBrowser\FileBrowser\bin\Debug\netcoreapp3.1\FileBrowser.dll
+E:\visual Studio projects\FileBrowser\FileBrowser\bin\Debug\netcoreapp3.1\FileBrowser.pdb
+E:\visual Studio projects\FileBrowser\FileBrowser\obj\Debug\netcoreapp3.1\FileBrowser.csprojAssemblyReference.cache
+E:\visual Studio projects\FileBrowser\FileBrowser\obj\Debug\netcoreapp3.1\FileBrowser.csproj.CoreCompileInputs.cache
+E:\visual Studio projects\FileBrowser\FileBrowser\obj\Debug\netcoreapp3.1\FileBrowser.AssemblyInfoInputs.cache
+E:\visual Studio projects\FileBrowser\FileBrowser\obj\Debug\netcoreapp3.1\FileBrowser.AssemblyInfo.cs
+E:\visual Studio projects\FileBrowser\FileBrowser\obj\Debug\netcoreapp3.1\FileBrowser.dll
+E:\visual Studio projects\FileBrowser\FileBrowser\obj\Debug\netcoreapp3.1\FileBrowser.pdb
+E:\visual Studio projects\FileBrowser\FileBrowser\obj\Debug\netcoreapp3.1\FileBrowser.genruntimeconfig.cache
