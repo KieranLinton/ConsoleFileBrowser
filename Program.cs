@@ -13,16 +13,16 @@ namespace FileBrowser
         static void Main(string[] args)
         {
             int selected = 0;
-            String Root = Directory.GetCurrentDirectory() + "\\Home";
+            DirectoryInfo Root = new DirectoryInfo(Directory.GetCurrentDirectory() + "\\Home");
             DirectoryInfo SelectedDirectory;
-            List<FileSystemInfo> AvailableDirectorys = new List<FileSystemInfo>();
+            List<FileSystemInfo> AvailableItems = new List<FileSystemInfo>();
 
-            SelectedDirectory = new DirectoryInfo(Root);
+            SelectedDirectory = Root;
 
             NewDir:
-            AvailableDirectorys.Clear();
-            AvailableDirectorys.AddRange(SelectedDirectory.GetDirectories());
-            AvailableDirectorys.AddRange(SelectedDirectory.GetFiles());
+            AvailableItems.Clear();
+            AvailableItems.AddRange(SelectedDirectory.GetDirectories());
+            AvailableItems.AddRange(SelectedDirectory.GetFiles());
 
            
 
@@ -32,7 +32,7 @@ namespace FileBrowser
             var DefaultBC = Console.BackgroundColor;
             var DefaultFC = Console.ForegroundColor;
 
-            for (var i = 0; i < AvailableDirectorys.Count; i++)
+            for (var i = 0; i < AvailableItems.Count; i++)
             {
                 
                 if (i == selected)
@@ -41,7 +41,7 @@ namespace FileBrowser
                     Console.ForegroundColor = ConsoleColor.Black;
                 }
                 
-                Console.WriteLine(AvailableDirectorys[i].Name);
+                Console.WriteLine(AvailableItems[i].Name);
 
                 Console.BackgroundColor = DefaultBC;
                 Console.ForegroundColor = DefaultFC;
@@ -66,29 +66,25 @@ namespace FileBrowser
 
             void GoToSelected()
             {
-                SelectedDirectory = (DirectoryInfo)AvailableDirectorys[selected];
-                selected = 0;
+                if(AvailableItems.Count != 0 )
+                    SelectedDirectory = (DirectoryInfo)AvailableItems[selected];
+                    selected = 0;
             }
             void GoBack()
             {
-                SelectedDirectory = SelectedDirectory.Parent;
-                selected = 0;
+                if(SelectedDirectory.FullName != Root.FullName) 
+                    SelectedDirectory = SelectedDirectory.Parent;
+                    selected = 0;
             }
             void GoUp()
             {
                 if (selected > 0)
-                {
                     selected--;
-                    Console.SetCursorPosition(0, Console.CursorTop - 1);
-                }
             }
             void Godown()
             {
-                if (selected < AvailableDirectorys.Count - 1)
-                { 
+                if (selected < AvailableItems.Count - 1)
                     selected++;
-                    Console.SetCursorPosition(0, Console.CursorTop + 1);
-                }
             }
         }
     }
